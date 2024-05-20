@@ -15,6 +15,7 @@
 		395732CE2BF7207B005DCDE3 /* fantasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395732CD2BF7207B005DCDE3 /* fantasyViewModel.swift */; };
 		395732D02BF7209A005DCDE3 /* fantasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395732CF2BF7209A005DCDE3 /* fantasyView.swift */; };
 		395732D32BF720D9005DCDE3 /* modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395732D22BF720D9005DCDE3 /* modelo.swift */; };
+		395732D82BF9516C005DCDE3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 395732D72BF9516C005DCDE3 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		395732CD2BF7207B005DCDE3 /* fantasyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantasyViewModel.swift; sourceTree = "<group>"; };
 		395732CF2BF7209A005DCDE3 /* fantasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantasyView.swift; sourceTree = "<group>"; };
 		395732D22BF720D9005DCDE3 /* modelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelo.swift; sourceTree = "<group>"; };
+		395732D92BFAEF67005DCDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395732D82BF9516C005DCDE3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		395732B92BF71DCC005DCDE3 /* fantasyRole */ = {
 			isa = PBXGroup;
 			children = (
+				395732D92BFAEF67005DCDE3 /* Info.plist */,
 				395732BA2BF71DCC005DCDE3 /* fantasyRoleApp.swift */,
 				395732BC2BF71DCC005DCDE3 /* ContentView.swift */,
 				395732BE2BF71DCD005DCDE3 /* Assets.xcassets */,
@@ -121,6 +125,9 @@
 			dependencies = (
 			);
 			name = fantasyRole;
+			packageProductDependencies = (
+				395732D72BF9516C005DCDE3 /* Kingfisher */,
+			);
 			productName = fantasyRole;
 			productReference = 395732B72BF71DCC005DCDE3 /* fantasyRole.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 395732AE2BF71DCC005DCDE3;
+			packageReferences = (
+				395732D62BF9516C005DCDE3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 395732B82BF71DCC005DCDE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,8 +322,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fantasyRole/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fantasyRole/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -348,8 +361,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fantasyRole/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fantasyRole/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -395,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		395732D62BF9516C005DCDE3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		395732D72BF9516C005DCDE3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 395732D62BF9516C005DCDE3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 395732AF2BF71DCC005DCDE3 /* Project object */;
 }

@@ -1,11 +1,3 @@
-//
-//  modelo.swift
-//  fantasyRole
-//
-//  Created by monscerrat gutierrez on 16/05/24.
-//
-
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
@@ -23,13 +15,13 @@ struct FantasyRole: Codable {
 }
 
 // MARK: - Brastlewark
-struct Brastlewark: Codable {
+struct Brastlewark: Codable, Hashable {
     let id: Int
     let name: String
     let thumbnail: String
     let age: Int
     let weight, height: Double
-    let hairColor: String
+    let hairColor: HairColor
     let professions: [Profession]
     let friends: [String]
 
