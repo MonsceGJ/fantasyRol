@@ -12,7 +12,8 @@ class fantasyViewModel: ObservableObject {
     @Published var contenViewModel: FantasyRole?
     @Published var error: Error?
     @Published var imageUrls: [String] = []
-    
+    @Published var searchText = ""
+    @Published var filtros: [String] = []
     let apliClientModel = ApiClient()
     
     func getContent() {
@@ -23,6 +24,7 @@ class fantasyViewModel: ObservableObject {
                     self.contenViewModel = inhabitans
                     self.error = nil
                     self.imageUrls = inhabitans.brastlewark.map { $0.thumbnail}
+                    self.filtrosGnomos()
                     print("Habitantes obtenidos \(inhabitans)")
                 case .failure(let error):
                     self.error = error
@@ -40,6 +42,15 @@ class fantasyViewModel: ObservableObject {
     func refreshData () {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.getContent()
+        }
+    }
+    
+    func filtrosGnomos() {
+        if searchText.isEmpty {
+            filtros = imageUrls
+        } else {
+            filtros = imageUrls.filter { $0.lowercased().contains(searchText.lowercased())}
+
         }
     }
 }
